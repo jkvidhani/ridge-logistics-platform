@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'https://ridge-logistics-platform-production.up.railway.app';
+const BASE_URL = 'https://ridge-logistics-platform-production.up.railway.app';
 
 import { MapContainer, TileLayer, Polyline, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';

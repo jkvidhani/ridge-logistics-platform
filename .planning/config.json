@@ -1,0 +1,9 @@
+{
+  "project_name": "NER Logistics Platform",
+  "version": "1.0.0",
+  "description": "AI-powered Logistics & Accessibility Intelligence Platform for India's NER",
+  "workflow": {
+    "auto_plan": false,
+    "require_reviews": true
+  }
+}

@@ -1,0 +1,67 @@
+# ============================================================
+# RIDGE — Regional Intelligence & Geospatial Efficiency
+# .gitignore
+# ============================================================
+
+# ---------------------------
+# Node / React / Vite
+# ---------------------------
+node_modules/
+dist/
+.vite/
+build/
+*.local
+
+# ---------------------------
+# Python / FastAPI
+# ---------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---------------------------
+# Environment & Secrets
+# ---------------------------
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+*.env
+
+# ---------------------------
+# Editor & OS Artifacts
+# ---------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ---------------------------
+# Misc
+# ---------------------------
+*.zip
+*.tar.gz
+*.rar

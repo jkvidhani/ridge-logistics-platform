@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://ridge-logistics-platform-production.up.railway.app';
+
 import { MapContainer, TileLayer, Polyline, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -165,7 +168,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchRoutes = async () => {
       try {
-        const routesRes = await axios.get('http://127.0.0.1:8000/api/routes');
+        const routesRes = await axios.get(`${BASE_URL}/api/routes`);
         setRoutes(routesRes.data);
       } catch (error) {
         console.error("API Fetch Error:", error);

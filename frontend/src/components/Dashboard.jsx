@@ -22,7 +22,8 @@ import {
   ChevronUp
 } from 'lucide-react';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+// Configurable API base URL: defaults to relative '/api' for Vercel full-stack deployment
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '');
 
 // ---------------------------------------------------------
 // CUSTOM ICONS (Enterprise Style)
@@ -155,7 +156,8 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchRoutes = async () => {
       try {
-        const routesRes = await axios.get(`${BASE_URL}/api/routes`);
+        const endpoint = API_BASE_URL.endsWith('/api') ? `${API_BASE_URL}/routes` : `${API_BASE_URL}/api/routes`;
+        const routesRes = await axios.get(endpoint);
         setRoutes(routesRes.data);
       } catch (error) {
         console.error("API Error:", error); setHasError(true);
